@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1685709670913.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "836D7AB1",
+    "lastKnownWriteTime" : 1685715547,
+    "last_content_update" : 1685715548868,
+    "path" : "/Volumes/HD02/02. Trabalho/00. Studies/230525 GPS Rio/bus_speeds/1R/2-get_speeds.R",
+    "project_path" : "1R/2-get_speeds.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

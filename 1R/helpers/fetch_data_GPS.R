@@ -1,8 +1,8 @@
-# Codigo auxiliar - ler dados de GPS do SPPO do Rio a partir da API 
+# Define function to fetch data from Rio's bus GPS API for one hour
 # Renan Carioca
-# 25 de maio de 2023
+# May 25th 2023
 
-# DOCUMENTACAO
+# API DOCUMENTATION
 # https://www.data.rio/documents/transporte-rodoviário-api-de-gps-dos-ônibus-sppo-beta
 
 require(data.table)
@@ -10,38 +10,47 @@ require(dplyr)
 require(jsonlite)
 require(sf)
 
-get_GPS <- function(data_ini, data_fim){
+get_GPS <- function(date_ini, date_end){
   
-  # data_ini <- '2023-01-23 06:00:00'
-  # data_fim <- '2023-01-23 07:00:00'
+  # date_ini <- '2023-01-23 06:00:00'
+  # date_end <- '2023-01-23 07:00:00'
   
-  data_ini <- data_ini %>% gsub(pattern = " ", replacement = "+", x = data_ini)
-  data_fim <- data_fim %>% gsub(pattern = " ", replacement = "+", x = data_fim)
+  date_ini <- date_ini %>% gsub(pattern = " ", replacement = "+")
+  date_end <- date_end %>% gsub(pattern = " ", replacement = "+")
   
   # https://dados.mobilidade.rio/gps/sppo?dataInicial=AAAA-MM-DD+HH:MM:SS&dataFinal=AAAA-MM-DD+HH:MM:SS
-  # https://dados.mobilidade.rio/gps/sppo?dataInicial=2023-01-01+06:00:00&dataFinal=2023-01-01+07:00:00
   
-  query_ <- paste0("https://dados.mobilidade.rio/gps/sppo?dataInicial=", data_ini,"&dataFinal=", data_fim)
+  query_ <- paste0("https://dados.mobilidade.rio/gps/sppo?dataInicial=", date_ini, "&dataFinal=", date_end)
   
   output_API <- try(expr = httr::GET(query_) %>%
                       
                       httr::content('text') %>%
                       jsonlite::fromJSON() %>%
                       mutate(latitude = latitude %>% gsub(pattern = ",", replacement = "."),
-                             longitude = longitude %>% gsub(pattern = ",", replacement = ".")), silent = T)
+                             longitude = longitude %>% gsub(pattern = ",", replacement = ".")) %>% 
+                      
+                      rename(bus_id = ordem,
+                             timestamp = datahora,
+                             long = longitude,
+                             lat = latitude) %>%
+                      
+                      select(bus_id, timestamp, long, lat) %>%
+                      mutate(timestamp = as.POSIXct(x = as.numeric(timestamp)/1e3, origin = '1970-01-01')))
+                    #%>%
+                      # st_as_sf(coords = c("long", "lat"), crs = 4326) %>% as("Spatial"), silent = T)
   
-  # nao adicionar esse processo agora, esperar o bloco de arquivos total
-  # st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
-
   if(class(output_API) == "data.frame"){
     
-    return(output_API)
+    date_ini <- date_ini %>% gsub(pattern = ":", replacement = "-") %>% gsub(pattern = "\\+", replacement = "_")
+    date_end <- date_end %>% gsub(pattern = ":", replacement = "-") %>% gsub(pattern = "\\+", replacement = "_")
+    
+    saveRDS(object = output_API, file = paste0('2outputs/0queriesGPS/', date_ini, 'T', date_end, '.RDS'))
     
   } else{return(NULL)}
   
 }
 
-# teste <- get_GPS(data_ini = '2023-04-23 06:00:00',
+# test <- get_GPS(data_ini = '2023-04-23 06:00:00',
 #                  data_fim = '2023-04-23 07:00:00')
 # 
-# saveRDS(object = teste, file = '2outputs/0primeiroteste_query.RDS')
+# saveRDS(object = teste, file = '2outputs/0first_query')

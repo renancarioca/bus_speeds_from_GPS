@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1685719043622.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C2E62B32",
+    "lastKnownWriteTime" : 1684782311,
+    "last_content_update" : 1684782311,
+    "path" : "/Volumes/HD02/02. Trabalho/02. CAF ECS/6 Piloto CDMX/caf_piloto_CDMX/0_R/STE-L2/03_velocidades_por_tramo_L2.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "639,0",
+        "scrollLine" : "632"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

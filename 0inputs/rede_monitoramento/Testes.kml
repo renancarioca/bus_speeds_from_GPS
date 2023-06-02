@@ -46,5 +46,152 @@
         </coordinates>
       </LineString>
     </Placemark>
+    <Placemark>
+      <name>Presidente Vargas - O/E - 1</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.2060599,-22.910228,0
+          -43.2005236,-22.9084463,0
+          -43.1974337,-22.9074382,0
+          -43.1954274,-22.906786,0
+          -43.194612,-22.9064401,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Presidente Vargas - O/E - 2
+</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.194612,-22.9064401,0
+          -43.1927697,-22.9058469,0
+          -43.1906883,-22.9051848,0
+          -43.188049,-22.904325,0
+          -43.1838995,-22.9029642,0
+          -43.1791198,-22.9014224,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Presidente Vargas - E/O - 2
+</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.1792135,-22.9011129,0
+          -43.1839342,-22.9026448,0
+          -43.1882901,-22.9040778,0
+          -43.1946631,-22.9060544,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Presidente Vargas - E/O - 1
+</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.1946631,-22.9060544,0
+          -43.1973549,-22.906934,0
+          -43.2015285,-22.9082978,0
+          -43.205305,-22.9095133,0
+          -43.2062384,-22.9097802,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Senador Pompeu - O/E</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.1913165,-22.9025007,0
+          -43.190426,-22.9019077,0
+          -43.1888596,-22.9008798,0
+          -43.1879476,-22.900277,0
+          -43.1873844,-22.8999508,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>R Camerino - N/S - 1</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.1873844,-22.8999508,0
+          -43.1863766,-22.900656,0
+          -43.1853145,-22.9015257,0
+          -43.1846922,-22.9019408,0
+          -43.1844347,-22.90201,0
+          -43.1842738,-22.902089,0
+          -43.1841128,-22.9023262,0
+          -43.1839412,-22.9027808,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Av Passos - N/S - 1</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.1839027,-22.902895,0
+          -43.1835701,-22.903656,0
+          -43.1831946,-22.9045355,0
+          -43.1828942,-22.905257,0
+          -43.1825616,-22.9059982,0
+          -43.1823685,-22.9064331,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>R da Carioca - O/E - 1</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.1822855,-22.9064667,0
+          -43.1821434,-22.9065507,0
+          -43.1820683,-22.9067162,0
+          -43.1819959,-22.9068842,0
+          -43.1819395,-22.9069781,0
+          -43.1818349,-22.9070251,0
+          -43.1817411,-22.907035,0
+          -43.1815748,-22.9069806,0
+          -43.1811161,-22.90682,0
+          -43.180172,-22.90661,0
+          -43.1794853,-22.9064741,0
+          -43.1786458,-22.9063654,0
+          -43.1781362,-22.9064,0
+          -43.1771786,-22.9063876,0
+          -43.1753333,-22.9064296,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Av Graça Aranha - N/S - 1</name>
+      <styleUrl>#line-000000-1200-nodesc</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+          -43.1753105,-22.9064701,0
+          -43.1751603,-22.9067864,0
+          -43.1749028,-22.9074634,0
+          -43.1744146,-22.9087926,0
+          -43.1737709,-22.910522,0
+          -43.1737065,-22.91069,0
+          -43.1735509,-22.9109816,0
+          -43.1734383,-22.9110952,0
+          -43.1732237,-22.9112879,0
+        </coordinates>
+      </LineString>
+    </Placemark>
   </Document>
 </kml>

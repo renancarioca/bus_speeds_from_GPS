@@ -44,6 +44,9 @@ You can indicate which columns represent the key columns in the GPS files by cha
 ## Getting the results
 The results are stored in the 2outputs folder and presented in two ways:
 * _speeds_summary.csv_ - A report in the form of a .csv file containing the calculated median speed (and different quantiles) for each date and hour, and that can be later aggregated in whichever way is more convenient to your application.
+
+![2023-04_Weekday_6AM-9AM](https://github.com/renancarioca/bus_speeds_from_GPS/assets/11481007/27995ec7-4225-44bf-abfd-dce731214ed0)
+
 * Maps (in 2outputs/2plotted_speed_maps) illustrating the average bus speeds for each segment in the monitoring network, aggregated by:
   * Type of day (weekday, Saturdays, or Sundays - it does not account for holidays yet)
   * Month, identified as YYYY-MM

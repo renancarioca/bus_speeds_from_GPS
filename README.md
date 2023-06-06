@@ -10,7 +10,7 @@ This repository uses data from Rio de Janeiro (available in data.rio) as a templ
 
 This can be done by:
 * Specifying the network of streets where you want to monitor bus speeds. To do this, use Google My Maps to design a KML layer where every line is a street or street segment where you want to calculate bus speeds.
-* Uploading the GPS files of the buses in the transportation system you want to monitor. The file must be a .csv or a .txt file separated by a semicolon (; or another separator, you can change that in the function), and each GPS record must contain at least an identifier for the bus (e.g. its plate), a timestamp, and the coordinates.
+* Uploading the GPS files of the buses in the transportation system you want to monitor. The file must be a .csv file separated by a semicolon (; or another separator, you can change that in the function), and each GPS record must contain at least an identifier for the bus (e.g. its plate), a timestamp, and the coordinates.
 
 ### Designing the monitoring network
 Use [Google My Maps]([url](https://www.google.com/maps/about/mymaps/)) to design the network of streets where you want to monitor bus speeds. To do this, create a layer and create line segments to indicate where you want to calculate average bus speeds.
@@ -34,7 +34,7 @@ Use the '0-code_setup.R' file to
 
 In the '0-code_setup.R' file, specify the folder where you are storing your GPS files by changing the _GPS_path_ variable.
 
-The files must be either .csv of .txt files, with a semicolon (;) as a separator. You can change the column separator and the decimal separator (defaulted as the dot '.') in the '0-code setup.R' file.
+The files must be a .csv, with a semicolon (;) as a separator. You can change the column separator and the decimal separator (defaulted as the dot '.') in the '0-code setup.R' file.
 
 You can indicate which columns represent the key columns in the GPS files by changing the characters for the following variables:
 * *bus_identifier* - representing a unique id for each bus, like a bus plate or device unique id.

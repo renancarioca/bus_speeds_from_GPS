@@ -43,8 +43,8 @@ You can indicate which columns represent the key columns in the GPS files by cha
 
 ## Getting the results
 The results are stored in the 2outputs folder and presented in two ways:
-* A report in the form of a .csv file containing the calculated speed for each bus pass, and that can be later aggregated in whichever way is more convenient to your application.
-* Maps illustrating the average bus speeds for each segment in the monitoring network, aggregated by:
+* _speeds_summary.csv_ - A report in the form of a .csv file containing the calculated median speed (and different quantiles) for each date and hour, and that can be later aggregated in whichever way is more convenient to your application.
+* Maps (in 2outputs/2plotted_speed_maps) illustrating the average bus speeds for each segment in the monitoring network, aggregated by:
   * Type of day (weekday, Saturdays, or Sundays - it does not account for holidays yet)
   * Month, identified as YYYY-MM
   * Period of the day:

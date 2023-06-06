@@ -1,5 +1,5 @@
 # Calculating bus speeds in streets from GPS data
-Buses are the main form of public transportation in many cities, and usually the spinal cord of how people move, but the way streets are designed often penalizes people that use buses. Despite moving more people at once, buses are commonly stuck in traffic jams caused *by cars*.
+Buses are the main form of public transportation in many cities, and usually the spinal cord of how people move, but the way streets are designed often penalizes people that ride them. Despite moving more people at once, buses are commonly stuck in traffic jams caused *by cars*.
 
 <img width="899" alt="Screen Shot 2023-06-06 at 11 56 08" src="https://github.com/renancarioca/bus_speeds_from_GPS/assets/11481007/1c5f6b12-a09d-49b4-80f8-17c9551e3028">
 

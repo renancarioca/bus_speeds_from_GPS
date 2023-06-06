@@ -166,12 +166,12 @@ plot_graphs <- function(df_speeds_median){
             strip.text = element_text(size = 10, family = 'Hero New Light', colour = color_fuente),
             strip.background = element_rect(fill = 'white', colour = NA))
     
-    ggsave(p, filename = paste0('2outputs/2plotted speed maps/', specs$month[1], "_", specs$weekday, "_", specs$period, '.pdf'),
+    ggsave(p, filename = paste0('2outputs/2plotted_speed_maps/', specs$month[1], "_", specs$weekday, "_", specs$period, '.pdf'),
            device = cairo_pdf, dpi = 300,
            height = 8, width = 12,
            units = 'in')
     
-    ggsave(p, filename = paste0('2outputs/2plotted speed maps/', specs$month[1], "_", specs$weekday, "_", specs$period, '.png'),
+    ggsave(p, filename = paste0('2outputs/2plotted_speed_maps/', specs$month[1], "_", specs$weekday, "_", specs$period, '.png'),
            device = png, dpi = 300,
            height = 8, width = 12,
            units = 'in')

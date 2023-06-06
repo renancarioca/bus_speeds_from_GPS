@@ -151,7 +151,7 @@ get_speeds_one_corridor <- function(link_, gps_data){
 
 get_speeds_network <- function(monitoring_network, gps_file_){
   
-  #### GPS DATA MUST BE A SPATIAL POINTS DATA FRAME OBJECT AND FOLLOW THE STRUCTURE BELOW:
+  #### GPS DATA MUST BE A DATA FRAME OBJECT AND FOLLOW THE STRUCTURE BELOW:
   ## BUS_ID
   ## TIMESTAMP AS A YYYY-MM-DD HH:MM:SS
   ## LONG
@@ -159,7 +159,15 @@ get_speeds_network <- function(monitoring_network, gps_file_){
   
   cat("READING ", gps_file_, '\n')
   
-  gps_data_ <- readRDS(file = gps_file_)
+  # gps_data_ <- readRDS(file = gps_file_)
+  gps_data_ <- data.table::fread(input = gps_file_, sep = col_separator, dec = dec_separator) %>%
+    
+    as.data.frame() %>% 
+    
+    rename(bus_id = bus_identifier[1],
+           timestamp = timestamp_identifier[1],
+           long = longitude_identifier[1],
+           lat = latitude_identifier[1])
   
   gps_data <- try(expr = gps_data_ %>% 
                      
